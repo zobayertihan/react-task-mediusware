@@ -20,15 +20,15 @@ const Problem1 = () => {
   const sortData = (data) => {
     return data.sort((a, b) => {
       if (a.status === "Active" && b.status !== "Active") {
-        return -1; // Move Active tasks to the front
+        return -1;
       } else if (a.status !== "Active" && b.status === "Active") {
-        return 1; // Move Active tasks to the front
+        return 1;
       } else if (a.status === "Completed" && b.status !== "Completed") {
-        return -1; // Move Completed tasks after Active tasks
+        return -1;
       } else if (a.status !== "Completed" && b.status === "Completed") {
-        return 1; // Move Completed tasks after Active tasks
+        return 1;
       } else {
-        return 0; // Keep the same order for other statuses
+        return 0;
       }
     });
   };
